@@ -38,5 +38,12 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "tr46@0.0.3": "patches/tr46@0.0.3.patch",
+      "whatwg-url@5.0.0": "patches/whatwg-url@5.0.0.patch",
+      "next@15.1.2": "patches/next@15.1.2.patch"
+    }
   }
 }

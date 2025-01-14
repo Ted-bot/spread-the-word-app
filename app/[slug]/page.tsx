@@ -1,12 +1,17 @@
-import DetailedMessage, { type params as messageParams} from "@/components/ui/interaction/DetailedMessage";
+// import {type params as MessageParams} from "@/components/ui/interaction/DetailedMessage";
+import DetailedMessage from "@/components/ui/interaction/DetailedMessage";
 import MicroPhone from "@/components/ui/interaction/Microphone";
 // import type params
 
-export default function BlogPage(params: messageParams){
+export default async function BlogPage({params,} : {
+    params: Promise<{slug: string}>,
 
-    
-    return <main>
+    // type params = Promise<{slug: string}>;
+}) {
+    // const {slug} = await params;
+    return (<main>
         <h1>The Blog</h1>
-        <DetailedMessage {...params}/>
-    </main>
+        <DetailedMessage params={params}/>
+    </main>)
 }
+
